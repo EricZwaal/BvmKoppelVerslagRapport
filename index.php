@@ -13,8 +13,8 @@
         if (empty($_POST["subjectId"])) {
           $subjectIdErr = "Vul het dossieritemid in";
         } else {
-//          $subjectId = test_input($_POST["subjectId"]);
-          $subjectId = $_POST["subjectId"];
+          $subjectId = test_input($_POST["subjectId"]);
+//          $subjectId = $_POST["subjectId"];
         }
         if (empty($_POST["language"])) {} else {
           $language = test_input($_POST["language"]);
