@@ -8,11 +8,12 @@
         echo $subjectId;
       }
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // get subjectId from post
-        $subjectId = test_input($_POST["subjectId"]);
-        echo $subjectId;
-        
-      // define variable for language 
+        // get subjectId from post
+        if (!empty($_POST["subjectId"])) {
+          $subjectId = test_input($_POST["subjectId"]);
+          echo $subjectId;
+        }
+        // define variable for language 
         $language = $languageErr = "";
         if (empty($_POST["language"])) {
           $languageErr = "Kies eerst een taal";
