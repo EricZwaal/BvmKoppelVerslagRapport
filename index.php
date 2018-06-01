@@ -1,13 +1,13 @@
 <html>
   <body>
     <?php
+      // get subjectId
+      $subjectId = "";
+      if (isset($_GET['sbid'])) {
+        $subjectId = $_GET['sbid'];
+        echo $subjectId;
+      }
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // get subjectId
-        $subjectId = "";
-        if (isset($_GET['sbid'])) {
-          $subjectId = $_GET['sbid'];
-          echo $subjectId;
-        }
         // define variable for language 
         $language = $languageErr = "";
         if (empty($_POST["language"])) {
@@ -36,8 +36,8 @@
     </form>
     <?php
     echo $language;
-    /*
       if (isset($POST[button1])) {
+        echo $subjectId;
         // Hier gaat het gebeuren!
         // Voor reportconnector:
         $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
@@ -61,6 +61,7 @@
         // close curl resource to free up system resources 
         curl_close($curl)
 
+    /*
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
         $file = '{
           "KnSubject": {
@@ -103,8 +104,8 @@
         
         // close curl resource to free up system resources 
         curl_close($curl)
-      }
       */
+      }
     ?>
   </body>
 </html>
