@@ -48,18 +48,17 @@
         $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
         $encodedToken = base64_encode($token);
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/reportconnector/FB9AFB3C47411E357DE1108586DBD271?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=' . $subjectId;
-  echo $url;
-//        $curl = curl_init($url);
+        $curl = curl_init($url);
         // Returns the data/output as a string instead of raw data
-//        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         //Set your auth headers
-//        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-//          'Authorization: AfasToken ' . $encodedToken
-//          ));
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+          'Authorization: AfasToken ' . $encodedToken
+          ));
         
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
-//        $result = curl_exec($curl);
-//  echo $result;
+        $result = curl_exec($curl);
+  echo $result;
 //        $result = json_decode($result, true));
 //        $filedata = $result[filedata];
 //  echo $filedata;
