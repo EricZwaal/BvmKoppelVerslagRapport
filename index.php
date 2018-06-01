@@ -6,6 +6,9 @@
       if (isset($_GET['sbid'])) {
         $subjectId = $_GET['sbid'];
       }
+      if (isset($_GET['tokenurl'])) {
+        echo $_GET['tokenurl'];
+      }
       // if not posted, language is dutch.
       $language = "dutch";
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
