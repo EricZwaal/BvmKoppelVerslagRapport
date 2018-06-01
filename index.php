@@ -38,7 +38,7 @@
     <h2>Koppel een rapport aan dit verslag</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       SubjectId:
-      <input type="text" name="sbid" value="<?php echo $subjectId;?>"><span class="error">* <?php echo $subjectIdErr;?></span>
+      <input type="text" name="subjectId" value="<?php echo $subjectId;?>"><span class="error">* <?php echo $subjectIdErr;?></span>
       <br><br>
       Taal:
       <input type="radio" name="language" <?php if (isset($language) && $language=="dutch") echo "checked";?> value="dutch">Nederlands
