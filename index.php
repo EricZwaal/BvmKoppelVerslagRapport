@@ -59,12 +59,14 @@
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
         $result = curl_exec($curl);
 echo $result;
+        <br><br>
 //        $result = json_decode($result, true));
-//        $filedata = $result[filedata];
-//  echo $filedata;
+        $filedata = $result[filedata];
+  echo $filedata;
+        <br><br>
 
         // close curl resource to free up system resources 
-//        curl_close($curl)
+        curl_close($curl);
 
       /*
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
