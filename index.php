@@ -4,14 +4,15 @@
       // get subjectId from url
       $subjectId = $subjectIdErr = "";
       if (isset($_GET['sbid'])) {
-        echo "ezw";
         $subjectId = $_GET['sbid'];
         echo $subjectId;
       }
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        echo "ezw";
         // get subjectId from post
         if (empty($_POST["subjectId"])) {
           $subjectIdErr = "Vul het dossieritemid in";
+          echo $subjectidErr;
         } else {
           $subjectId = test_input($_POST["subjectId"]);
           echo $subjectId;
