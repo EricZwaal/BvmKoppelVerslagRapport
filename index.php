@@ -44,7 +44,7 @@
       if (isset($_POST[button1])) {
         // Hier gaat het gebeuren!
         // Voor reportconnector:
-        $token = "<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>";
+        $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
   echo $token;
 //        $encodedToken = base64_encode($token);
 //  echo $encodedToken;
