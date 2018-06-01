@@ -27,7 +27,6 @@
       }
     ?>
 
-    <h2>Koppel een rapport aan dit verslag</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       SubjectId:
       <input type="text" name="subjectId" value="<?php echo $subjectId;?>"><span class="error">* <?php echo $subjectIdErr;?></span>
@@ -44,9 +43,6 @@
       if (isset($_POST[button1])) {
         // Hier gaat het gebeuren!
         $token = $encodedToken = $url = $result = $filedata = "";
-
-        echo "<br>";
-        echo "Rapport ophalen...";
 
         // Voor reportconnector:
         $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
@@ -68,32 +64,17 @@
         // close curl resource to free up system resources 
         curl_close($curl);
   
-        echo "<br>";
-        echo "Rapport opgehaald";
-        
-        echo "<br>";
-        echo "Rapport versturen...";
-        
+        // send report back to subjectitem
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment';
-        $file = '{
-          "KnSubject": {
+        $file = '{"KnSubject": {
             "Element": {
               "@SbId": ' . $subjectId . ',
-              "Objects": [
-                {
+              "Objects": [{
                   "KnSubjectAttachment": {
-                    "Element": {
-                      "Fields": {
+                    "Element": {"Fields": {
                         "FileName": "Verslag.pdf",
                         "FileStream": "' . $filedata . '"
-                      }
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        }';
+                      }}}}]}}}';
 
         $curl = curl_init($url);
         // Returns the data/output as a string instead of raw data
@@ -117,11 +98,6 @@
         // close curl resource to free up system resources 
         curl_close($curl);
 
-        echo "<br>";
-        echo "Rapport verstuurd";
-        echo "<br>";
-        echo "Klaar!";
-        
         // show the report in the browser
         $decoded = base64_decode($filedata);
         $file = 'Verslag.pdf';
