@@ -38,6 +38,7 @@
     echo $language;
       if (isset($POST[button1])) {
         echo $subjectId;
+      /*
         // Hier gaat het gebeuren!
         // Voor reportconnector:
         $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
@@ -61,7 +62,6 @@
         // close curl resource to free up system resources 
         curl_close($curl)
 
-    /*
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
         $file = '{
           "KnSubject": {
