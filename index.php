@@ -5,6 +5,9 @@
       $subjectId = $subjectIdErr = "";
       if (isset($_GET['sbid'])) {
         $subjectId = $_GET['sbid'];
+      }     
+      if (isset($_GET['SbId'])) {
+        $subjectId = $_GET['SbId'];
       }
       if (isset($_GET['tokenurl'])) {
         echo $_GET['tokenurl'];
