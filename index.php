@@ -1,19 +1,17 @@
 <html>
   <body>
     <?php
-      // get subjectId from url
+      // get subjectId from url; soms in kleine letters, soms met hoofdletters.
       $subjectId = $subjectIdErr = "";
       if (isset($_GET['sbid'])) {
         $subjectId = $_GET['sbid'];
-      }     
-      if (isset($_GET['SbId'])) {
+      } else if (isset($_GET['SbId'])) {
         $subjectId = $_GET['SbId'];
       }
-      if (isset($_GET['tokenurl'])) {
-        echo $_GET['tokenurl'];
-      }
+
       // if not posted, language is dutch.
       $language = "dutch";
+
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // get subjectId from post
         if (empty($_POST["subjectId"])) {
