@@ -14,7 +14,6 @@
           $subjectIdErr = "Vul het dossieritemid in";
         } else {
           $subjectId = test_input($_POST["subjectId"]);
-//          $subjectId = $_POST["subjectId"];
         }
         if (empty($_POST["language"])) {} else {
           $language = test_input($_POST["language"]);
@@ -46,7 +45,7 @@
         // Hier gaat het gebeuren!
         // Voor reportconnector:
         $token = "<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>";
-//  echo $token;
+  echo $token;
 //        $encodedToken = base64_encode($token);
 //  echo $encodedToken;
 //        $url = "https://50762.afasonlineconnector.nl/ProfitRestServices/reportconnector/FB9AFB3C47411E357DE1108586DBD271?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=" . $subjectId;
