@@ -27,7 +27,6 @@
     ?>
 
     <h2>Koppel een rapport aan dit verslag</h2>
-<!--
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Taal:
       <input type="radio" name="language" <?php if (isset($language) && $language=="dutch") echo "checked";?> value="dutch">Nederlands
@@ -37,7 +36,6 @@
       <br><br>
       <input type="submit" name="button1" value="Koppel het rapport">  
     </form>
--->
     <?php
     /*
       if (isset($POST[button1])) {
