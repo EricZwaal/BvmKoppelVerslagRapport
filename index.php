@@ -10,7 +10,7 @@
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // get subjectId from post
         $subjectId = test_input($_POST["subjectId"]);
-      }
+        
       // define variable for language 
         $language = $languageErr = "";
         if (empty($_POST["language"])) {
