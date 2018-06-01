@@ -1,5 +1,5 @@
 <html>
-  <body>/*
+  <body>
     <?php
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // get subjectId
@@ -22,9 +22,9 @@
         return $data;
       }
     ?>
-*/
+
     <h2>Koppel een rapport aan dit verslag</h2>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+/*    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
       Taal:
       <input type="radio" name="language" <?php if (isset($language) && $language=="dutch") echo "checked";?> value="dutch">Nederlands
       <input type="radio" name="language" <?php if (isset($language) && $language=="english") echo "checked";?> value="english">Engels
@@ -33,7 +33,8 @@
       <br><br>
       <input type="submit" name="button1" value="Koppel het rapport">  
     </form>
- /*   <?php
+*/
+    /*   <?php
       if (isset($POST[button1])) {
         // Hier gaat het gebeuren!
         // Voor reportconnector:
