@@ -57,10 +57,11 @@
           ));
         
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
-        $result = curl_exec($curl);
+        <br><br>
+          $result = curl_exec($curl);
 echo $result;
         <br><br>
-//        $result = json_decode($result, true));
+        $result = json_decode($result, true));
         $filedata = $result[filedata];
   echo $filedata;
         <br><br>
