@@ -14,8 +14,9 @@
           $subjectIdErr = "Vul het dossieritemid in";
           echo $subjectidErr;
         } else {
-          $subjectId = test_input($_POST["subjectId"]);
+          $subjectId = $_POST["subjectId"];
           echo $subjectId;
+          echo "sbid gevuld";
         }
         // define variable for language 
         $language = $languageErr = "";
