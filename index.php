@@ -1,14 +1,13 @@
 <html>
   <body>
     <?php
-     // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // get subjectId
         $subjectId = "";
         if (isset($_GET['sbid'])) {
           $subjectId = $_GET['sbid'];
           echo $subjectId;
         }
-    /*
         // define variable for language 
         $language = $languageErr = "";
         if (empty($_POST["language"])) {
@@ -23,7 +22,6 @@
         $data = htmlspecialchars($data);
         return $data;
       }
-      */
     ?>
 
     <h2>Koppel een rapport aan dit verslag</h2>
@@ -37,6 +35,7 @@
       <input type="submit" name="button1" value="Koppel het rapport">  
     </form>
     <?php
+    echo $language;
     /*
       if (isset($POST[button1])) {
         // Hier gaat het gebeuren!
