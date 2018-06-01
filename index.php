@@ -34,8 +34,6 @@
       Taal:
       <input type="radio" name="language" <?php if (isset($language) && $language=="dutch") echo "checked";?> value="dutch">Nederlands
       <input type="radio" name="language" <?php if (isset($language) && $language=="english") echo "checked";?> value="english">Engels
-      <span class="error">
-
       <br><br>
       <input type="submit" name="button1" value="Koppel het rapport">  
     </form>
@@ -93,7 +91,6 @@
         
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
         $result = curl_exec($curl);
-        echo $result;
         
         // close curl resource to free up system resources 
         curl_close($curl);
