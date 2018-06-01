@@ -74,7 +74,7 @@
         echo "<br>";
         echo "Rapport versturen...";
         
-        $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
+        $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment';
         $file = '{
           "KnSubject": {
             "Element": {
@@ -93,7 +93,7 @@
               ]
             }
           }
-        }'
+        }';
 
         $curl = curl_init($url);
         // Returns the data/output as a string instead of raw data
@@ -112,12 +112,12 @@
         
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
         $result = curl_exec($curl);
-        echo $result
+        echo $result;
         
         // close curl resource to free up system resources 
-        curl_close($curl)
+        curl_close($curl);
 
-          echo "<br>";
+        echo "<br>";
         echo "Rapport verstuurd";
         echo "<br>";
         echo "Klaar!";
