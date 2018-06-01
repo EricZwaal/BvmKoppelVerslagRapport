@@ -5,24 +5,19 @@
       $subjectId = $subjectIdErr = "";
       if (isset($_GET['sbid'])) {
         $subjectId = $_GET['sbid'];
-        echo "sbid from url";
       }
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo "request=post";
         // get subjectId from post
         if (empty($_POST["subjectId"])) {
-          echo "sbid niet gepost";
           $subjectIdErr = "Vul het dossieritemid in";
-          echo $subjectidErr;
         } else {
-          echo "sbid gepost";
-          $subjectId = $_POST["subjectId"];
-          echo $subjectId;
+          $subjectId = test_input($_POST["subjectId"]);
         }
         // define variable for language 
-        $language = $languageErr = "";
+        // if not posted, language is dutch.
+        $language = "";
         if (empty($_POST["language"])) {
-          $languageErr = "Kies eerst een taal";
+          $language = "dutch";
         } else {
           $language = test_input($_POST["language"]);
         }
@@ -43,7 +38,7 @@
       Taal:
       <input type="radio" name="language" <?php if (isset($language) && $language=="dutch") echo "checked";?> value="dutch">Nederlands
       <input type="radio" name="language" <?php if (isset($language) && $language=="english") echo "checked";?> value="english">Engels
-      <span class="error">* <?php echo $languageErr;?></span>
+      <span class="error">
 
       <br><br>
       <input type="submit" name="button1" value="Koppel het rapport">  
@@ -51,11 +46,6 @@
     <?php
     echo $language;
       if (isset($_POST[button1])) {
-        echo "button1 gepost";
-        echo $subjectId;
-      } else {
-        echo "button1 niet gepost";
-      /*
         // Hier gaat het gebeuren!
         // Voor reportconnector:
         $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
@@ -79,6 +69,7 @@
         // close curl resource to free up system resources 
         curl_close($curl)
 
+      /*
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
         $file = '{
           "KnSubject": {
