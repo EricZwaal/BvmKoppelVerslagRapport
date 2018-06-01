@@ -84,7 +84,7 @@
                   "KnSubjectAttachment": {
                     "Element": {
                       "Fields": {
-                        "FileName": "Report.pdf",
+                        "FileName": "Verslag.pdf",
                         "FileStream": "' . $filedata . '"
                       }
                     }
@@ -121,6 +121,22 @@
         echo "Rapport verstuurd";
         echo "<br>";
         echo "Klaar!";
+        
+        // show the report in the browser
+        $decoded = base64_decode($filedata);
+        $file = 'Verslag.pdf';
+        file_put_contents($file, $decoded);
+
+        if (file_exists($file)) {
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/pfd');
+            header('Content-Disposition: inline; filename="'.basename($file).'"');
+            header('Content-Transfer-Encoding: binary');
+            header('Content-Length: ' . filesize($file));
+            header('Accept-Ranges: bytes');
+            @readfile($file);
+            unlink($file);
+        }        
       }
     ?>
   </body>
