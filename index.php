@@ -74,7 +74,6 @@
         echo "<br>";
         echo "Rapport versturen...";
         
-      /*
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
         $file = '{
           "KnSubject": {
@@ -117,11 +116,11 @@
         
         // close curl resource to free up system resources 
         curl_close($curl)
-      */
-        echo "<br>";
+
+          echo "<br>";
         echo "Rapport verstuurd";
+        echo "<br>";
         echo "Klaar!";
-        
       }
     ?>
   </body>
