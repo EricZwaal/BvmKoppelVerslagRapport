@@ -44,6 +44,10 @@
       if (isset($_POST[button1])) {
         // Hier gaat het gebeuren!
         $token = $encodedToken = $url = $result = $filedata = "";
+
+        echo "<br>";
+        echo "Rapport ophalen...";
+
         // Voor reportconnector:
         $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
         $encodedToken = base64_encode($token);
@@ -57,16 +61,19 @@
           ));
         
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
-  echo "<br><br>";
-          $result = curl_exec($curl);
-  echo "<br><br>";
+        $result = curl_exec($curl);
         $result = json_decode($result, true);
         $filedata = $result[filedata];
-  echo "<br><br>";
 
         // close curl resource to free up system resources 
         curl_close($curl);
-
+  
+        echo "<br>";
+        echo "Rapport opgehaald";
+        
+        echo "<br>";
+        echo "Rapport versturen...";
+        
       /*
         $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment'
         $file = '{
@@ -111,6 +118,10 @@
         // close curl resource to free up system resources 
         curl_close($curl)
       */
+        echo "<br>";
+        echo "Rapport verstuurd";
+        echo "Klaar!";
+        
       }
     ?>
   </body>
