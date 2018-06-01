@@ -57,14 +57,14 @@
           ));
         
         // get stringified data/output. See CURLOPT_RETURNTRANSFER
-//        <br><br>
+        echo "<br><br>";
           $result = curl_exec($curl);
 echo $result;
-//        <br><br>
+        echo "<br><br>";
         $result = json_decode($result, true);
         $filedata = $result[filedata];
   echo $filedata;
-//        <br><br>
+        echo "<br><br>";
 
         // close curl resource to free up system resources 
 //        curl_close($curl);
