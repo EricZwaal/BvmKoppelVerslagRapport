@@ -1,13 +1,14 @@
 <html>
   <body>
     <?php
-    /*
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     // if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // get subjectId
         $subjectId = "";
         if (isset($_GET['sbid'])) {
           $subjectId = $_GET['sbid'];
+          echo $subjectId;
         }
+    /*
         // define variable for language 
         $language = $languageErr = "";
         if (empty($_POST["language"])) {
