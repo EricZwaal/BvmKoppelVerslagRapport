@@ -41,15 +41,14 @@
       <input type="submit" name="button1" value="Koppel het rapport">  
     </form>
     <?php
-    echo $language;
       if (isset($_POST[button1])) {
         // Hier gaat het gebeuren!
         // Voor reportconnector:
-        $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
+        $token = "<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>";
   echo $token;
         $encodedToken = base64_encode($token);
-  echo $encodedToken;
-        $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/reportconnector/FB9AFB3C47411E357DE1108586DBD271?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=' . $subjectId;
+//  echo $encodedToken;
+        $url = "https://50762.afasonlineconnector.nl/ProfitRestServices/reportconnector/FB9AFB3C47411E357DE1108586DBD271?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=" . $subjectId;
   echo $url;
         $curl = curl_init($url);
         // Returns the data/output as a string instead of raw data
