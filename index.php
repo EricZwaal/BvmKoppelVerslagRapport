@@ -4,6 +4,7 @@
       // get subjectId from url
       $subjectId = $subjectIdErr = "";
       if (isset($_GET['sbid'])) {
+        echo "ezw";
         $subjectId = $_GET['sbid'];
         echo $subjectId;
       }
