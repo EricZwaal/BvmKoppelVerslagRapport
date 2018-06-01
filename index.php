@@ -41,7 +41,7 @@
     </form>
     <?php
     echo $language;
-      if (isset($POST[button1])) {
+      if (isset($_POST[button1])) {
         echo $subjectId;
       /*
         // Hier gaat het gebeuren!
