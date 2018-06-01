@@ -5,18 +5,19 @@
       $subjectId = $subjectIdErr = "";
       if (isset($_GET['sbid'])) {
         $subjectId = $_GET['sbid'];
-        echo $subjectId;
+        echo "sbid from url";
       }
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        echo "ezw";
+        echo "request=post";
         // get subjectId from post
         if (empty($_POST["subjectId"])) {
+          echo "sbid niet gepost";
           $subjectIdErr = "Vul het dossieritemid in";
           echo $subjectidErr;
         } else {
+          echo "sbid gepost";
           $subjectId = $_POST["subjectId"];
           echo $subjectId;
-          echo "sbid gevuld";
         }
         // define variable for language 
         $language = $languageErr = "";
@@ -42,7 +43,7 @@
       Taal:
       <input type="radio" name="language" <?php if (isset($language) && $language=="dutch") echo "checked";?> value="dutch">Nederlands
       <input type="radio" name="language" <?php if (isset($language) && $language=="english") echo "checked";?> value="english">Engels
-      <span class="error"> <?php echo $languageErr;?></span>
+      <span class="error">* <?php echo $languageErr;?></span>
 
       <br><br>
       <input type="submit" name="button1" value="Koppel het rapport">  
@@ -50,7 +51,10 @@
     <?php
     echo $language;
       if (isset($_POST[button1])) {
+        echo "button1 gepost";
         echo $subjectId;
+      } else {
+        echo "button1 niet gepost";
       /*
         // Hier gaat het gebeuren!
         // Voor reportconnector:
