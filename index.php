@@ -1,14 +1,17 @@
 <html>
   <body>
     <?php
-      // get subjectId
+      // get subjectId from url
       $subjectId = "";
       if (isset($_GET['sbid'])) {
         $subjectId = $_GET['sbid'];
         echo $subjectId;
       }
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // define variable for language 
+      // get subjectId from post
+        $subjectId = test_input($_POST["subjectId"]);
+      }
+      // define variable for language 
         $language = $languageErr = "";
         if (empty($_POST["language"])) {
           $languageErr = "Kies eerst een taal";
