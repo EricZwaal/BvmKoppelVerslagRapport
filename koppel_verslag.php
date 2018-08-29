@@ -1,6 +1,6 @@
 <?php
   $taal=$_GET["taal"];
-  $subjectId=$_GET["subjectId"];
+  $subjectId=$_POST["lngSbId"];
 ?>
 <html>
   <body>
