@@ -8,14 +8,14 @@
       } else if (isset($_GET['SbId'])) {
         $subjectId = $_GET['SbId'];
       }
-      $url = 'koppel_verslag.php&SbId=' & $subjectId;
-      echo $url;
+      $x = 'koppel_verslag.php&SbId=' & $subjectId;
+      echo $x;
       echo $subjectId;
     ?>
 
     <form action="koppel_verslag.php" method="post">
       <br>
-      <?php echo $subjectId,$url ?>
+      <?php echo $subjectId,$x ?>
       <br><br>
       <input type="submit" name="button" value="Koppel Nederlands rapport" > <br />  <br>
       <input type="submit" name="button" value="Koppel Engels rapport"     > <br />  
