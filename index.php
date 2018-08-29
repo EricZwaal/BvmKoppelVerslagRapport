@@ -8,7 +8,7 @@
       } else if (isset($_GET['SbId'])) {
         $subjectId = $_GET['SbId'];
       }
-      $url = "koppel_verslag.php&SbId=";
+      $url = "koppel_verslag.php&SbId="&$subjectId;
       echo $url;
     ?>
 
