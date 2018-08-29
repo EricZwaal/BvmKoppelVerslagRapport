@@ -15,7 +15,7 @@
 
     <form action="koppel_verslag.php" method="post">
       <br>
-      <?php echo $subjectId ?>
+      <?php echo $subjectId,$url ?>
       <br><br>
       <input type="submit" name="button" value="Koppel Nederlands rapport" > <br />  <br>
       <input type="submit" name="button" value="Koppel Engels rapport"     > <br />  
