@@ -1,6 +1,9 @@
 <html>
   <body>
     <?php
+      // Hier gaat het gebeuren!
+      $subjectId = $taal = $repGuid = $token = $fileName = $message = $encodedToken = $url = $result = $filedata = "";
+
       session_start();
       $subjectId=$_SESSION['subjectId'];
 
@@ -25,8 +28,6 @@
         echo "Er is iets fout gegaan! Er is geen POST gevonden";
       }
 
-      // Hier gaat het gebeuren!
-      $token = $encodedToken = $repGuid = $url = $result = $filedata = "";
       // token voor reportconnector:
       $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
       $encodedToken = base64_encode($token);
