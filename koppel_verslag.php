@@ -1,10 +1,8 @@
-<?php
-  $subjectId=$_POST["lngSbId"];
-?>
 <html>
   <body>
     <?php
       if($REQUEST_METHOD=="POST"){
+        $subjectId=$_POST["lngSbId"];
         switch($_POST["button"]) {
           case "Koppel Nederlands rapport":
             $taal="NL";
