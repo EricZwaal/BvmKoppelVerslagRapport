@@ -22,8 +22,8 @@
     <form action="koppel_verslag.php" method="post">
       <br><br>
       <?php echo "$subjectId" ?>
-      <input type="submit" name="button1" value="Koppel Nederlands rapport" > <br />  <br>
-      <input type="submit" name="button2" value="Koppel Engels rapport"     > <br />  
+      <input type="submit" name="button" value="Koppel Nederlands rapport" > <br />  <br>
+      <input type="submit" name="button" value="Koppel Engels rapport"     > <br />  
     </form>
   </body>
 </html>
