@@ -1,6 +1,9 @@
 <html>
   <body>
     <?php
+      if (isset($_GET['SbId'])) {
+        $subjectId = $_GET['SbId'];
+      }
       if($_SERVER['REQUEST_METHOD']=="POST"){
         $subjectId=$_POST["lngSbId"];
         switch($_POST["button"]) {
