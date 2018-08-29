@@ -12,7 +12,7 @@
       echo "$url";
     ?>
 
-    <form action="<?php echo "$url"; ?>" method="post">
+    <form action="koppel_verslag.php" method="post">
       <br>
       <?php echo $subjectId ?>
       <br><br>
