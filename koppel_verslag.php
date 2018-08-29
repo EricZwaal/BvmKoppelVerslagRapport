@@ -6,8 +6,8 @@
   <body>
     <?php
       echo "Hello world!";
-//      echo "$taal";
-//      echo "$subjectId";
+      echo "$taal";
+      echo "$subjectId";
     ?>
 /*    
         // Hier gaat het gebeuren!
