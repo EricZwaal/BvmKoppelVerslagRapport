@@ -8,10 +8,9 @@
       } else if (isset($_GET['SbId'])) {
         $subjectId = $_GET['SbId'];
       }
-      $_POST["lngSbId"]=$subjectId;
     ?>
 
-    <form action="koppel_verslag.php" method="post">
+    <form action="koppel_verslag.php&SbId="&$subjectId method="post">
       <br>
       <?php echo "$subjectId" ?>
       <br><br>
