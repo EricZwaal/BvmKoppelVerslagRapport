@@ -1,13 +1,23 @@
 <?php
-  $taal=$_GET["taal"];
   $subjectId=$_POST["lngSbId"];
 ?>
 <html>
   <body>
     <?php
-      echo "Hello world!";
-      echo "$taal";
-      echo "$subjectId";
+      if($REQUEST_METHOD=="POST"){
+        switch($_POST["button"]) {
+          case "Koppel Nederlands rapport":
+            $taal="NL";
+            break;
+          case "Koppel Engels rapport":
+            $taal="EN";
+            break;
+        }
+
+        echo "Hello world!";
+        echo "$taal";
+        echo "$subjectId";
+      }
     ?>
 /*    
         // Hier gaat het gebeuren!
