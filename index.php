@@ -8,8 +8,8 @@
       } else if (isset($_GET['SbId'])) {
         $subjectId = $_GET['SbId'];
       }
-      $url = "koppel_verslag.php&SbId=" & $subjectId;
-      echo "$url";
+      $url = "koppel_verslag.php&SbId=";
+      echo $url;
     ?>
 
     <form action="koppel_verslag.php" method="post">
