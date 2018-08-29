@@ -8,10 +8,14 @@
         switch($_POST["button"]) {
           case "Koppel Nederlands rapport":
             $taal="NL";
+            $repGuid = 'F8623E3146B76227A47E1191151D2E5F';
+            $fileName="Verslag.pdf";
             $message="Het Nederlandse rapport is nu gekoppeld aan het dossieritem. Ververs de pagina (F5) om het zichtbaar te maken.";
             break;
           case "Koppel Engels rapport":
             $taal="EN";
+            $repGuid = 'FB9AFB3C47411E357DE1108586DBD271';
+            $fileName="Report.pdf";
             $message="Het Engelse rapport is nu gekoppeld aan het dossieritem. Ververs de pagina (F5) om het zichtbaar te maken.";
             break;
         }
@@ -26,12 +30,6 @@
       // token voor reportconnector:
       $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
       $encodedToken = base64_encode($token);
-      // Engels verslag
-      if ($taal=="NL") {
-        $repGuid = 'F8623E3146B76227A47E1191151D2E5F';
-      } else {
-        $repGuid = 'FB9AFB3C47411E357DE1108586DBD271';
-      }
       $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/reportconnector/' . $repGuid . '?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=' . $subjectId;
       $curl = curl_init($url);
       // Returns the data/output as a string instead of raw data
@@ -56,7 +54,7 @@
             "Objects": [{
                 "KnSubjectAttachment": {
                   "Element": {"Fields": {
-                      "FileName": "Verslag.pdf",
+                      "FileName": "' . $fileName . '",
                       "FileStream": "' . $filedata . '"
                     }}}}]}}}';
       $curl = curl_init($url);
