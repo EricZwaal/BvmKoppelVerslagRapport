@@ -10,7 +10,8 @@
       }
     ?>
 
-    <form action="koppel_verslag.php&SbId="&$subjectId method="post">
+    $url = "koppel_verslag.php&SbId="&$subjectId;
+    <form action=$url method="post">
       <br>
       <?php echo "$subjectId" ?>
       <br><br>
