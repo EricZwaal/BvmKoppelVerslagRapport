@@ -5,9 +5,9 @@
 <html>
   <body>
     <?php
-        
-      echo $taal
-      echo $subjectId
+      echo "Hello world!";
+      echo "$taal";
+      echo "$subjectId";
 /*    
         // Hier gaat het gebeuren!
         $token = $encodedToken = $repGuid = $url = $result = $filedata = "";
