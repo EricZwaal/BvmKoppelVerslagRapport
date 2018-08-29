@@ -8,6 +8,8 @@
       } else if (isset($_GET['SbId'])) {
         $subjectId = $_GET['SbId'];
       }
+      session_start();
+      $_SESSION['subjectId'] = $subjectId;
     ?>
 
     <form action="koppel_verslag.php" method="post">
