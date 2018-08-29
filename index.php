@@ -1,8 +1,8 @@
 <html>
   <head>
     <script language="VBScript">
-      sub Verzend(actie)
-        fMijnFormulier.action="koppel_verslag.php?taal=" & taal
+      sub Verzend(taal, sbid)
+        fMijnFormulier.action="koppel_verslag.php?taal=" & taal & "&subjectId=" & sbid
         fMijnFormulier.submit
       end sub
     </script>
@@ -20,8 +20,8 @@
 
     <form name="fMijnFormulier" method="post">
       <br><br>
-      <input type="button" name="button1" value="Koppel Nederlands rapport" onclick="Verzend NL" /> <br />  <br>
-      <input type="button" name="button2" value="Koppel Engels rapport"     onclick="Verzend EN" /> <br />  
+      <input type="button" name="button1" value="Koppel Nederlands rapport" onclick="Verzend NL, " . $subjectId /> <br />  <br>
+      <input type="button" name="button2" value="Koppel Engels rapport"     onclick="Verzend EN, " . $subjectId /> <br />  
     </form>
   </body>
 </html>
