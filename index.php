@@ -11,7 +11,7 @@
       $url = "koppel_verslag.php&SbId="&$subjectId;
     ?>
 
-    <?php echo "$url" ?>
+    <?php echo $url ?>
     <form action="<?php echo "$url"; ?>" method="post">
       <br>
       <?php echo "$subjectId" ?>
