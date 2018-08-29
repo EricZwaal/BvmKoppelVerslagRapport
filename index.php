@@ -1,12 +1,12 @@
 <html>
   <head>
-    <script language="VBScript">
+/*    <script language="VBScript">
       sub Verzend(taal)
         fMijnFormulier.action="koppel_verslag.php?taal=" & taal
         fMijnFormulier.submit
       end sub
     </script>
-  </head>
+*/  </head>
   <body>
     <?php
       // get subjectId from url; soms in kleine letters, soms met hoofdletters.
@@ -19,10 +19,11 @@
       $_POST["lngSbId"]=$subjectId;
     ?>
 
-    <form name="fMijnFormulier" method="post">
+    <form action="koppel_verslag.php" method="post">
       <br><br>
-      <input type="button" name="button1" value="Koppel Nederlands rapport" onclick='Verzend NL' /> <br />  <br>
-      <input type="button" name="button2" value="Koppel Engels rapport"     onclick='Verzend EN' /> <br />  
+      <?php echo "$subjectId" ?>
+      <input type="submit" name="button1" value="Koppel Nederlands rapport" > <br />  <br>
+      <input type="submit" name="button2" value="Koppel Engels rapport"     > <br />  
     </form>
   </body>
 </html>
