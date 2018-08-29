@@ -6,8 +6,9 @@
   <body>
     <?php
       echo "Hello world!";
-      echo "$taal";
-      echo "$subjectId";
+//      echo "$taal";
+//      echo "$subjectId";
+    ?>
 /*    
         // Hier gaat het gebeuren!
         $token = $encodedToken = $repGuid = $url = $result = $filedata = "";
@@ -82,8 +83,7 @@
             unlink($file);
         }        
       }
-    */
-    
     ?>
+    */
   </body>
 </html>
