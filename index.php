@@ -12,7 +12,7 @@
     ?>
 
 
-    <form action=<?php echo "$url" ?> method="post">
+    <form action=<?php echo "$url"; ?> method="post">
       <br>
       <?php echo "$subjectId" ?>
       <br><br>
