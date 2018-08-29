@@ -1,11 +1,14 @@
 <?php
   $taal=$_GET["taal"];
-  $subjectId=$_POST["subjectId"];
+  $subjectId=$_GET["subjectId"];
 ?>
 <html>
   <body>
     <?php
-
+        
+      echo $taal
+      echo $subjectId
+/*    
         // Hier gaat het gebeuren!
         $token = $encodedToken = $repGuid = $url = $result = $filedata = "";
         // token voor reportconnector:
@@ -79,7 +82,7 @@
             unlink($file);
         }        
       }
-    
+    */
     
     ?>
   </body>
