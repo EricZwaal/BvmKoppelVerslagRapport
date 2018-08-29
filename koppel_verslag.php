@@ -16,6 +16,10 @@
         echo "$taal";
         echo "$subjectId";
       }
+      else
+      {
+        echo "geen POST gevonden";
+      }
     ?>
 /*    
         // Hier gaat het gebeuren!
