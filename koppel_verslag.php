@@ -31,7 +31,7 @@
       // token voor reportconnector:
       $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
       $encodedToken = base64_encode($token);
-      $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/reportconnector/' . $repGuid . '?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=' . $subjectId;
+      $url = 'https://50762.rest.afas.online/profitrestservices/reportconnector/' . $repGuid . '?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=' . $subjectId;
       $curl = curl_init($url);
       // Returns the data/output as a string instead of raw data
       curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -48,7 +48,7 @@
       curl_close($curl);
 
       // send report back to subjectitem
-      $url = 'https://50762.afasonlineconnector.nl/ProfitRestServices/connectors/KnSubject/KnSubjectAttachment';
+      $url = 'https://50762.rest.afas.online/profitrestservices/connectors/KnSubject/KnSubjectAttachment';
       $file = '{"KnSubject": {
           "Element": {
             "@SbId": ' . $subjectId . ',
