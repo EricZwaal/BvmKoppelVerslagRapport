@@ -29,7 +29,7 @@
       }
 
       // token voor reportconnector:
-      $token = '<token><version>1</version><data>17F8567825A440EEA6B1FDB9F6F6A12E5BA226C040DF93AE1B9D018F89282AB3</data></token>';
+      $token = '<token><version>1</version><data>17F8567825A44...</data></token>';
       $encodedToken = base64_encode($token);
       $url = 'https://50762.rest.afas.online/profitrestservices/reportconnector/' . $repGuid . '?filterfieldids=KnSbjSbId&operatortypes=1&filtervalues=' . $subjectId;
       $curl = curl_init($url);
